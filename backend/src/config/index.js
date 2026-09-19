@@ -1,5 +1,2 @@
-const env = require('./env');
-const db = require('./db');
-
-module.exports = { env, db };
-
+export * from './env.js';
+export * from './db.js';

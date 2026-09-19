@@ -1,6 +1,7 @@
 {
   "name": "aqalbo-backend",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "description": "AQALBO trusted human expertise platform API",
   "main": "src/server.js",

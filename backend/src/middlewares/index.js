@@ -1,5 +1,1 @@
-const { errorHandler } = require('./errorHandler');
-
-module.exports = {
-  errorHandler,
-};
+export * from './errorHandler.js';

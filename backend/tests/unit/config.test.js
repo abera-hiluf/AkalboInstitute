@@ -1,6 +1,6 @@
-const { test, describe } = require('node:test');
-const assert = require('node:assert');
-const { env } = require('../../src/config');
+import { test, describe } from 'node:test';
+import assert from 'node:assert';
+import { env } from '../../src/config/index.js';
 
 describe('Config Environment (Unit)', () => {
   test('env has default port and environment', () => {

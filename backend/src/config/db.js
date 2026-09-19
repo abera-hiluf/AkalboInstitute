@@ -1,11 +1,13 @@
-const { Pool } = require('pg');
-const env = require('./env');
+import pg from 'pg';
+import env from './env.js';
 
-const pool = env.databaseUrl
+const { Pool } = pg;
+
+export const pool = env.databaseUrl
   ? new Pool({ connectionString: env.databaseUrl })
   : null;
 
-async function query(text, params) {
+export async function query(text, params) {
   if (!pool) {
     throw new Error('DATABASE_URL is not configured');
   }
@@ -13,5 +15,4 @@ async function query(text, params) {
   return pool.query(text, params);
 }
 
-module.exports = { pool, query };
-
+export default { pool, query };

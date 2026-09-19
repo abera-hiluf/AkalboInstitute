@@ -1,6 +1,6 @@
-const { test, describe, before, after } = require('node:test');
-const assert = require('node:assert');
-const app = require('../../src/app');
+import { test, describe, before, after } from 'node:test';
+import assert from 'node:assert';
+import app from '../../src/app.js';
 
 describe('API Health Check (Integration)', () => {
   let server;
