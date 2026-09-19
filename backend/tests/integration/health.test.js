@@ -1,8 +1,8 @@
 const { test, describe, before, after } = require('node:test');
 const assert = require('node:assert');
-const app = require('../src/app');
+const app = require('../../src/app');
 
-describe('API Health Check', () => {
+describe('API Health Check (Integration)', () => {
   let server;
   let baseUrl;
 
@@ -20,7 +20,7 @@ describe('API Health Check', () => {
     await new Promise((resolve) => server.close(resolve));
   });
 
-  test('GET /health returns 200 and ok status', async () => {
+  test('GET /health returns 200 and service status', async () => {
     const res = await fetch(`${baseUrl}/health`);
     assert.strictEqual(res.status, 200);
 

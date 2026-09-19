@@ -1,18 +1,14 @@
 const express = require('express');
+const routes = require('./routes');
+const { errorHandler } = require('./middlewares');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/health', (_req, res) => {
-  res.json({ service: 'aqalbo-backend', status: 'ok' });
-});
+app.use('/', routes);
 
-app.use((err, _req, res, _next) => {
-  console.error(err);
-  res.status(500).json({ error: 'Internal server error' });
-});
+app.use(errorHandler);
 
 module.exports = app;
-
