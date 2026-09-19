@@ -1,0 +1,24 @@
+{
+  "name": "aqalbo-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AQALBO trusted human expertise platform API",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test",
+    "test:unit": "node --test tests/unit",
+    "test:integration": "node --test tests/integration"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {}
+}
+
