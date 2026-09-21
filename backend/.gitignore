@@ -1,7 +1,13 @@
+# Dependencies
 node_modules/
+
+# Environment variables
 .env
+.env.*
+!.env.example
+
+# Logs & temp
+*.log
 coverage/
 uploads/
-*.log
-
-
+tmp/
